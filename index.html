@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-[100%] h-[100vh] flex justify-center items-center">
+      <div
+        class="w-[70vh] h-[50vh] bg-[#4a154b] text-white items-center text-center rounded-xl"
+      >
+        <h1 class="text-[34px] font-bold mt-8">Password Generator</h1>
+        <input
+          class="w-[50%] h-10 mt-6 text-black outline-none rounded-xl p-2"
+          type="text"
+          placeholder="Click on Generate button"
+          id="generatedPassword"
+        />
+
+        <div class="flex w-full justify-center items-center flex-col mt-5">
+          <div class="mb-5">
+            <button
+              onclick="generateNewPassword()"
+              class="bg-violet-500 px-3 py-1 text-white"
+            >
+              Generate
+            </button>
+            <button
+              onclick="copyPassword()"
+              class="bg-violet-500 px-3 py-1 text-white"
+            >
+              Copy to Clipbord
+            </button>
+          </div>
+          <div>
+            <label for="length">Password Length</label>
+            <input
+              type="text"
+              name=""
+              class="w-10 text-center text-black text-center"
+              id="length"
+            />
+          </div>
+          <div>
+            <label for="upercase">Include uppercase letter</label>
+            <input type="checkbox" name="" id="upercase" />
+          </div>
+          <div>
+            <label for="lowerCase">include lower case letter</label>
+            <input type="checkbox" name="" id="lowerCase" />
+          </div>
+          <div>
+            <label for="numbers">include numbers</label>
+            <input type="checkbox" name="" id="numbers" />
+          </div>
+          <div>
+            <label for="symbols">include symbols</label>
+            <input type="checkbox" name="" id="symbols" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
